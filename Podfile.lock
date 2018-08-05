@@ -1,0 +1,16 @@
+PODS:
+  - WatchdogInspector (1.2.0)
+
+DEPENDENCIES:
+  - WatchdogInspector
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WatchdogInspector
+
+SPEC CHECKSUMS:
+  WatchdogInspector: 2820de2548107c1e5d712671bd04d81ea649f916
+
+PODFILE CHECKSUM: 19245da402fb44774b04f525837faa7096c197ad
+
+COCOAPODS: 1.5.3

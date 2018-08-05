@@ -12,9 +12,11 @@
 		28977B9A2114ECF0000812C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28977B982114ECF0000812C8 /* Main.storyboard */; };
 		28977B9C2114ECF0000812C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28977B9B2114ECF0000812C8 /* Assets.xcassets */; };
 		28977B9F2114ECF0000812C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28977B9D2114ECF0000812C8 /* LaunchScreen.storyboard */; };
+		A635139FBD0011A3DC4C3215 /* Pods_60FPSScrolling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7632BDA837F6979A9083E94 /* Pods_60FPSScrolling.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1667B06E7157A9AA92F1F8CF /* Pods-60FPSScrolling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-60FPSScrolling.release.xcconfig"; path = "Pods/Target Support Files/Pods-60FPSScrolling/Pods-60FPSScrolling.release.xcconfig"; sourceTree = "<group>"; };
 		28977B912114ECF0000812C8 /* 60FPSScrolling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 60FPSScrolling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28977B942114ECF0000812C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28977B962114ECF0000812C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		28977B9B2114ECF0000812C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28977B9E2114ECF0000812C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28977BA02114ECF0000812C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FBB720945959D84565BFD80 /* Pods-60FPSScrolling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-60FPSScrolling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-60FPSScrolling/Pods-60FPSScrolling.debug.xcconfig"; sourceTree = "<group>"; };
+		E7632BDA837F6979A9083E94 /* Pods_60FPSScrolling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_60FPSScrolling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A635139FBD0011A3DC4C3215 /* Pods_60FPSScrolling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				28977B932114ECF0000812C8 /* 60FPSScrolling */,
 				28977B922114ECF0000812C8 /* Products */,
+				9152F0583B87FF2835FE9740 /* Pods */,
+				6F7DD6DC9E0E28D63919DD52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = 60FPSScrolling;
 			sourceTree = "<group>";
 		};
+		6F7DD6DC9E0E28D63919DD52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7632BDA837F6979A9083E94 /* Pods_60FPSScrolling.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9152F0583B87FF2835FE9740 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FBB720945959D84565BFD80 /* Pods-60FPSScrolling.debug.xcconfig */,
+				1667B06E7157A9AA92F1F8CF /* Pods-60FPSScrolling.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28977BA32114ECF0000812C8 /* Build configuration list for PBXNativeTarget "60FPSScrolling" */;
 			buildPhases = (
+				21BD88062FA0EB084AD5C987 /* [CP] Check Pods Manifest.lock */,
 				28977B8D2114ECF0000812C8 /* Sources */,
 				28977B8E2114ECF0000812C8 /* Frameworks */,
 				28977B8F2114ECF0000812C8 /* Resources */,
+				F039F6712E910B2ACBD072EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21BD88062FA0EB084AD5C987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-60FPSScrolling-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F039F6712E910B2ACBD072EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-60FPSScrolling/Pods-60FPSScrolling-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WatchdogInspector/WatchdogInspector.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WatchdogInspector.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-60FPSScrolling/Pods-60FPSScrolling-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28977B8D2114ECF0000812C8 /* Sources */ = {
@@ -272,6 +337,7 @@
 		};
 		28977BA42114ECF0000812C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FBB720945959D84565BFD80 /* Pods-60FPSScrolling.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -289,6 +355,7 @@
 		};
 		28977BA52114ECF0000812C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1667B06E7157A9AA92F1F8CF /* Pods-60FPSScrolling.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
