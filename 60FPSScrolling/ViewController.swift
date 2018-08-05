@@ -40,6 +40,10 @@ func randomAlphaNumericString(length: Int) -> String {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var arTableView: UITableView!
+    
+    @IBOutlet weak var enTableView: UITableView!
+    
     let data: [String] = {
         var data: [String] = []
         
@@ -60,28 +64,16 @@ class ViewController: UIViewController {
         return data
     }()
     
-    private lazy var heights: [CGFloat] = { [unowned self] in
-        var heights: [CGFloat] = []
-        for i in 0..<self.data.count {
-            heights.append(height(index: i))
-        }
-        return heights
-    }()
-    
-    func height(index: Int) -> CGFloat {
-        let labelWidth = UIScreen.main.bounds.width / 2 - 8 * 2
-        let text = NSMutableAttributedString.init(string: self.data[index])
-        text.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 17), range: NSRange.init(location: 0, length: (self.data[index] as NSString).length))
-        text.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.black, range: NSRange.init(location: 0, length: (self.data[index] as NSString).length))
-        
-        let boundingRect = text.boundingRect(with: CGSize.init(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: [NSStringDrawingOptions.usesLineFragmentOrigin, NSStringDrawingOptions.usesFontLeading], context: nil)
-        
-        return ceil(boundingRect.size.height + 1) + 8 * 2
-    }
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        arTableView.rowHeight = UITableViewAutomaticDimension
+        arTableView.estimatedRowHeight = 350
+        
+        enTableView.rowHeight = UITableViewAutomaticDimension
+        enTableView.estimatedRowHeight = 350
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,9 +105,4 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.heights[indexPath.row]
-    }
-}
 
